@@ -100,18 +100,14 @@ class Home extends StatelessWidget {
               )
             ],
           ),
-          Column(children: [
-            Flexible(
-              child: const Padding(
-                padding: EdgeInsets.only(bottom: 20, top: 20),
-                child: Text("Categories",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold)),
-              ),
-            )
-          ]),
+          Padding(
+            padding: EdgeInsets.only(bottom: 20, top: 20),
+            child: Text("Categories",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold)),
+          ),
           SizedBox(
             height: 90,
             child: ListView(scrollDirection: Axis.horizontal, children: [

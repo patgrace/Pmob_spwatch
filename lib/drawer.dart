@@ -22,14 +22,14 @@ class DrawerSide extends StatelessWidget {
                     context, MaterialPageRoute(builder: (context) => Home()));
               }),
           _drawerItem(
-              icon: Icons.person,
+              icon: Icons.home,
               text: 'Home',
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Home()));
               }),
           _drawerItem(
-              icon: Icons.person,
+              icon: Icons.info_outline,
               text: 'About Us',
               onTap: () {
                 Navigator.push(context,
