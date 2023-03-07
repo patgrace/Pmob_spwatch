@@ -45,16 +45,16 @@ Widget _drawerHeader() {
   return UserAccountsDrawerHeader(
     currentAccountPicture: ClipOval(
       child: Image(
-        image: AssetImage('images/dinokuning.JPEG'),
+        image: AssetImage('images/dinokuning.jpeg'),
         fit: BoxFit.fill,
       ),
     ),
     otherAccountsPictures: const [
       ClipOval(
-        child: Image(image: AssetImage('images/dino2.JPEG'), fit: BoxFit.cover),
+        child: Image(image: AssetImage('images/dino2.jpeg'), fit: BoxFit.cover),
       ),
       ClipOval(
-        child: Image(image: AssetImage('images/dino3.JPEG'), fit: BoxFit.cover),
+        child: Image(image: AssetImage('images/dino3.jpeg'), fit: BoxFit.cover),
       )
     ],
     accountName: Text('Patgrace'),

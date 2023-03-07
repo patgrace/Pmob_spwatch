@@ -16,13 +16,13 @@ class AboutUsPage extends StatelessWidget {
           title: const Text(
             'About Us',
             style: TextStyle(
-                color: Colors.blue,
+                color: Colors.white,
                 fontFamily: 'Montserrat',
                 fontWeight: FontWeight.bold,
                 fontSize: 25),
           ),
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black,
           centerTitle: true,
         ),
         body: Column(children: [
@@ -32,84 +32,28 @@ class AboutUsPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 50, right: 20, top: 10),
                 child: Center(
-                  child: Container(
-                    width: 300,
-                    height: 100,
-                    decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                    child: Text(
-                      "SP Watch",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                      Container(
+                        width: 300,
+                        height: 200,
+                        child: Text(
+                          'SPWatch is a mobile application designed for movie enthusiasts who want to stay up-to-date with the latest movies and read reviews from other users. The app allows users to search for movies, view information about each film (such as the plot summary, cast and crew, and release date), and read and write reviews.',
+                          style: TextStyle(color: Colors.white, fontSize: 16),
+                          textAlign: TextAlign.justify,
+                        ),
                       ),
-                    ),
-                  ),
-                ),
+                      Text(
+                          "develope by :\nPatricia Grace Nathania/082111633033\nShaquille Etanntyo Wibowo/082111633098",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(color: Colors.grey))
+                    ])),
               ),
             ],
           ),
           SizedBox(
             height: 10,
-          ),
-          ListTile(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => Home(),
-                ),
-              );
-            },
-            leading: Icon(
-              Icons.home,
-              size: 35,
-            ),
-            title: Text(
-              "Home",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ),
-          ListTile(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => AboutUsPage(),
-                ),
-              );
-            },
-            leading: Icon(
-              Icons.person,
-              size: 35,
-            ),
-            title: Text(
-              "About Us",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          ),
-          ListTile(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => Home(),
-                ),
-              );
-            },
-            leading: Icon(
-              Icons.settings,
-              size: 35,
-            ),
-            title: Text(
-              "Setting",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
           ),
         ]));
   }

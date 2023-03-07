@@ -62,18 +62,7 @@ flutter:
   assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-      - images/foto_kucing.jpg
-      - images/wakanda.jpg
-      - images/action.jpg
-      - images/animation.jpg
-      - images/comedy.jpg
-      - images/romance.jpg
-      - images/horror.jpg
-      - images/black.jpg
-      - images/peninsula.png
-      - images/dinokuning.JPEG
-      - images/dino2.JPEG
-      - images/dino3.JPEG
+      - images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

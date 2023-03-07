@@ -29,7 +29,8 @@ class Cate1 extends StatelessWidget {
                           children: [
                             CircleAvatar(
                               radius: 30,
-                              backgroundImage: NetworkImage(""),
+                              backgroundImage:
+                                  AssetImage('images/dinokuning.jpeg'),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(10),
@@ -60,121 +61,140 @@ class Cate1 extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Center(
+                  SizedBox(
+                    height: 40,
+                    width: 390,
                     child: Container(
-                      color: Colors.white,
-                      height: 50,
-                      width: 370,
-                      child: Row(
-                        children: [Icon(Icons.search), Text("Search")],
-                      ),
-                    ),
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0))),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(left: 10, right: 2),
+                              child: Icon(
+                                Icons.search,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Text(
+                              'Search Movie',
+                              style: TextStyle(color: Colors.grey[300]),
+                            )
+                          ],
+                        )),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 10, bottom: 20),
                     child: Text(
-                      'akshfskajfhd',
+                      'Action',
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
-                  Padding(
-                      padding: const EdgeInsets.only(top: 10, bottom: 10),
-                      child: Container(
-                        margin: EdgeInsets.only(bottom: 20),
-                        height: 190,
-                        width: 370,
-                        decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 209, 233, 245),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Row(children: [
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                right: 10, left: 20, top: 20, bottom: 20),
-                            child: Image.asset(
-                              'images/peninsula.png',
-                              width: 120,
-                              height: 200,
-                            ),
-                          ),
-                          Column(
-                            children: [
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 0, top: 20),
-                                child: Container(
-                                  width: 150,
-                                  decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 155, 203, 243),
-                                    borderRadius: BorderRadius.circular(15),
-                                    boxShadow: const [
-                                      BoxShadow(
-                                        color: Color(0x3f000000),
-                                        offset: Offset(0, 4),
-                                        blurRadius: 2,
-                                      ),
-                                    ],
-                                  ),
-                                  child: Text('The Last Of Us',
-                                      style: TextStyle(
-                                          color:
-                                              Color.fromARGB(146, 40, 40, 232)),
-                                      textAlign: TextAlign.center),
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(top: 15, right: 10),
-                                child: Container(
-                                  width: 190,
-                                  height: 100,
-                                  child: Text(
-                                      'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 10,
-                                          fontFamily: "roboto"),
-                                      textAlign: TextAlign.justify),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 150),
-                                child: Icon(
-                                  Icons.favorite_border_sharp,
-                                ),
-                              )
-                            ],
-                          )
-                        ]),
-                      )),
-                  Container(
-                      margin: EdgeInsets.only(bottom: 20),
-                      height: 150,
-                      width: 370,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                      )),
-                  Container(
-                      margin: EdgeInsets.only(bottom: 20),
-                      height: 150,
-                      width: 370,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                      )),
-                  Container(
-                      margin: EdgeInsets.only(bottom: 20),
-                      height: 150,
-                      width: 370,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20),
-                      ))
+                  MovieReview(
+                    Img: 'images/peninsula.png',
+                    Judul: 'The Last Of Us',
+                    Sinopsis:
+                        'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.',
+                  ),
+                  MovieReview(
+                      Img: 'images/residentevil.png',
+                      Judul: 'Resident evil',
+                      Sinopsis:
+                          'Ditetapkan pada tahun 1998, kisah asal ini mengeksplorasi rahasia Spencer Mansion yang misterius dan Kota Raccoon yang naas.'),
+                  MovieReview(
+                      Img: 'images/topgunmaverick.png',
+                      Judul: 'Top Gun Maverick',
+                      Sinopsis:
+                          'Setelah tiga puluh tahun, Maverick masih mendorong amplop sebagai penerbang angkatan laut top, tetapi harus menghadapi hantu masa lalunya ketika dia memimpin lulusan elit TOP GUN dalam misi yang menuntut pengorbanan tertinggi dari mereka yang dipilih untuk menerbangkannya.'),
+                  MovieReview(
+                      Img: 'images/thelastofus.png',
+                      Judul: 'The Last Of Us',
+                      Sinopsis:
+                          'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.'),
                 ],
               ),
             ],
           ),
+        ));
+  }
+}
+
+class MovieReview extends StatelessWidget {
+  final String Img;
+  final String Judul;
+  final String Sinopsis;
+  MovieReview({required this.Img, required this.Judul, required this.Sinopsis});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.only(top: 10, bottom: 10),
+        child: Container(
+          margin: EdgeInsets.only(bottom: 20),
+          height: 190,
+          width: 370,
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 209, 233, 245),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Row(children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                  right: 10, left: 20, top: 20, bottom: 20),
+              child: Image.asset(
+                Img,
+                fit: BoxFit.contain,
+              ),
+            ),
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 0, top: 20),
+                  child: Container(
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 155, 203, 243),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x3f000000),
+                          offset: Offset(0, 4),
+                          blurRadius: 2,
+                        ),
+                      ],
+                    ),
+                    child: Text(Judul,
+                        style:
+                            TextStyle(color: Color.fromARGB(146, 40, 40, 232)),
+                        textAlign: TextAlign.center),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 15, right: 10),
+                  child: Container(
+                    width: 190,
+                    height: 100,
+                    child: Text(Sinopsis,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 10,
+                            fontFamily: "roboto"),
+                        textAlign: TextAlign.justify),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 150),
+                  child: Icon(
+                    Icons.favorite_border_sharp,
+                  ),
+                )
+              ],
+            )
+          ]),
         ));
   }
 }

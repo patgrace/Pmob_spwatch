@@ -27,7 +27,7 @@ class Home extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 20,
-                      backgroundImage: AssetImage('images/dinokuning.JPEG'),
+                      backgroundImage: AssetImage('images/dinokuning.jpeg'),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(10),
@@ -65,7 +65,7 @@ class Home extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Search product',
+                      'Search Moview',
                       style: TextStyle(color: Colors.grey[300]),
                     )
                   ],
@@ -115,6 +115,64 @@ class Home extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 20),
                 child: Row(
                   children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Cate1()));
+                      },
+                      child: Container(
+                        height: 100,
+                        width: 140,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            color: Colors.grey),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Action',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                            Image.asset(
+                              'images/action.jpg',
+                              width: 35,
+                              height: 35,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Container(
+                  height: 100,
+                  width: 140,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Romance',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Image.asset(
+                        'images/romance.jpg',
+                        width: 35,
+                        height: 35,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Row(
+                  children: [
                     Container(
                       height: 100,
                       width: 140,
@@ -125,11 +183,11 @@ class Home extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Romance',
+                            'Horror',
                             style: TextStyle(fontSize: 18),
                           ),
                           Image.asset(
-                            'images/romance.jpg',
+                            'images/horror.jpg',
                             width: 35,
                             height: 35,
                           ),
@@ -139,86 +197,31 @@ class Home extends StatelessWidget {
                   ],
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Container(
+                  height: 100,
+                  width: 140,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.0),
+                      color: Colors.grey),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Comedy',
+                        style: TextStyle(fontSize: 18),
+                      ),
+                      Image.asset(
+                        'images/comedy.jpg',
+                        width: 35,
+                        height: 35,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ]),
-            //       Padding(
-            //         padding: const EdgeInsets.only(right: 20),
-            //         child: Container(
-            //           height: 100,
-            //           width: 140,
-            //           decoration: BoxDecoration(
-            //               borderRadius: BorderRadius.circular(8.0),
-            //               color: Colors.grey),
-            //           child: Column(
-            //             mainAxisAlignment: MainAxisAlignment.center,
-            //             children: [
-            //               Text(
-            //                 'Romnce',
-            //                 style: TextStyle(fontSize: 18),
-            //               ),
-            //               Image.asset(
-            //                 'images/romance.jpg',
-            //                 width: 35,
-            //                 height: 35,
-            //               ),
-            //             ],
-            //           ),
-            //         ),
-            //       ),
-            // //       Padding(
-            //         padding: const EdgeInsets.only(right: 20),
-            //         child: Row(
-            //           children: [
-            //             Container(
-            //               height: 100,
-            //               width: 140,
-            //               decoration: BoxDecoration(
-            //                   borderRadius: BorderRadius.circular(8.0),
-            //                   color: Colors.grey),
-            //               child: Column(
-            //                 mainAxisAlignment: MainAxisAlignment.center,
-            //                 children: [
-            //                   Text(
-            //                     'Romance',
-            //                     style: TextStyle(fontSize: 18),
-            //                   ),
-            //                   Image.asset(
-            //                     'images/romance.jpg',
-            //                     width: 35,
-            //                     height: 35,
-            //                   ),
-            //                 ],
-            //               ),
-            //             ),
-            //           ],
-            //         ),
-            //       ),
-            //       Padding(
-            //         padding: const EdgeInsets.only(right: 20),
-            //         child: Container(
-            //           height: 100,
-            //           width: 140,
-            //           decoration: BoxDecoration(
-            //               borderRadius: BorderRadius.circular(8.0),
-            //               color: Colors.blueGrey),
-            //           child: Column(
-            //             mainAxisAlignment: MainAxisAlignment.center,
-            //             children: [
-            //               Text(
-            //                 'Comedy',
-            //                 style: TextStyle(fontSize: 18),
-            //               ),
-            //               Image.asset(
-            //                 'images/comedy.jpg',
-            //                 width: 35,
-            //                 height: 35,
-            //               ),
-            //             ],
-            //           ),
-            //         ),
-            //       ),
-            //     ],
-            //   ),
-            // ),
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 10, top: 10),
