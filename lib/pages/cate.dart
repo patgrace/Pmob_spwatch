@@ -1,13 +1,9 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_new, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, unnecessary_new, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 
-void main(List<String> args) {
-  runApp(Action());
-}
-
-class Action extends StatelessWidget {
-  const Action({super.key});
+class Cate1 extends StatelessWidget {
+  const Cate1({super.key});
 
   // This widget is the root of your application.
   @override

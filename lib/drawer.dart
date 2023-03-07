@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:test_doang/pages/about_us.dart';
 import 'package:test_doang/pages/home.dart';
 
 class DrawerSide extends StatelessWidget {
@@ -20,6 +21,20 @@ class DrawerSide extends StatelessWidget {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Home()));
               }),
+          _drawerItem(
+              icon: Icons.person,
+              text: 'Home',
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Home()));
+              }),
+          _drawerItem(
+              icon: Icons.person,
+              text: 'About Us',
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AboutUsPage()));
+              }),
         ],
       ),
     );
@@ -30,21 +45,21 @@ Widget _drawerHeader() {
   return UserAccountsDrawerHeader(
     currentAccountPicture: ClipOval(
       child: Image(
-        image: AssetImage('images/action.jpg'),
+        image: AssetImage('images/dinokuning.JPEG'),
         fit: BoxFit.fill,
       ),
     ),
     otherAccountsPictures: const [
       ClipOval(
-        child: Image(image: AssetImage('images/action.jpg'), fit: BoxFit.cover),
+        child: Image(image: AssetImage('images/dino2.JPEG'), fit: BoxFit.cover),
       ),
       ClipOval(
-        child: Image(image: AssetImage('images/action.jpg'), fit: BoxFit.cover),
+        child: Image(image: AssetImage('images/dino3.JPEG'), fit: BoxFit.cover),
       )
     ],
-    accountName: Text('User'),
+    accountName: Text('Patgrace'),
     accountEmail: Text('user@gmail.com'),
-    decoration: BoxDecoration(color: Color.fromARGB(255, 3, 178, 58)),
+    decoration: BoxDecoration(color: Color.fromARGB(255, 0, 0, 0)),
   );
 }
 
@@ -55,7 +70,10 @@ Widget _drawerItem(
   return ListTile(
     title: Row(
       children: <Widget>[
-        Icon(icon),
+        Icon(
+          icon,
+          color: Colors.blue,
+        ),
         Padding(
           padding: EdgeInsets.only(left: 25.0),
           child: Text(

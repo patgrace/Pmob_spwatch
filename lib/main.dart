@@ -2,7 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:test_doang/pages/home.dart';
+import 'package:test_doang/pages/logintrue.dart';
+import 'pages/LoginScreen.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
+  runApp(MaterialApp(
+    home: Home(),
+    theme: ThemeData(brightness: Brightness.dark),
+    debugShowCheckedModeBanner: false,
+  ));
 }

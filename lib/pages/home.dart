@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:test_doang/drawer.dart';
+import 'package:test_doang/pages/cateOne.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -9,28 +10,40 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      endDrawer: DrawerSide(),
       backgroundColor: Colors.black,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.blue),
         elevation: 0,
         backgroundColor: Colors.black,
         title: Padding(
-          padding: const EdgeInsets.fromLTRB(20, 0, 150, 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CircleAvatar(
-                radius: 20,
+          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+          child:
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Container(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 20,
+                      backgroundImage: AssetImage('images/dinokuning.JPEG'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Text("Hi Patricia!",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.w700)),
+                    ),
+                  ],
+                ),
               ),
-              Text("halo Patrica!",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold)),
-            ],
-          ),
+            ),
+          ]),
         ),
       ),
-      drawer: DrawerSide(),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -87,141 +100,129 @@ class Home extends StatelessWidget {
               )
             ],
           ),
-          const Padding(
-            padding: EdgeInsets.only(bottom: 20, top: 20),
-            child: Text("Categories",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold)),
-          ),
+          Column(children: [
+            Flexible(
+              child: const Padding(
+                padding: EdgeInsets.only(bottom: 20, top: 20),
+                child: Text("Categories",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold)),
+              ),
+            )
+          ]),
           SizedBox(
             height: 90,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Container(
-                    height: 100,
-                    width: 140,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        color: Colors.grey),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Romance',
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        Image.asset(
-                          'images/romance.jpg',
-                          width: 35,
-                          height: 35,
-                        ),
-                      ],
+            child: ListView(scrollDirection: Axis.horizontal, children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 140,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.0),
+                          color: Colors.grey),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Romance',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          Image.asset(
+                            'images/romance.jpg',
+                            width: 35,
+                            height: 35,
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Container(
-                    height: 100,
-                    width: 140,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        color: Colors.grey),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Horror',
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        Image.asset(
-                          'images/horror.jpg',
-                          width: 35,
-                          height: 35,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Container(
-                    height: 100,
-                    width: 140,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        color: Colors.grey),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Action',
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        Image.asset(
-                          'images/action.jpg',
-                          width: 35,
-                          height: 35,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Container(
-                    height: 100,
-                    width: 140,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        color: Colors.grey),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Animation',
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        Image.asset(
-                          'images/animation.jpg',
-                          width: 35,
-                          height: 35,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: Container(
-                    height: 100,
-                    width: 140,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.0),
-                        color: Colors.blueGrey),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Comedy',
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        Image.asset(
-                          'images/comedy.jpg',
-                          width: 35,
-                          height: 35,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ]),
+            //       Padding(
+            //         padding: const EdgeInsets.only(right: 20),
+            //         child: Container(
+            //           height: 100,
+            //           width: 140,
+            //           decoration: BoxDecoration(
+            //               borderRadius: BorderRadius.circular(8.0),
+            //               color: Colors.grey),
+            //           child: Column(
+            //             mainAxisAlignment: MainAxisAlignment.center,
+            //             children: [
+            //               Text(
+            //                 'Romnce',
+            //                 style: TextStyle(fontSize: 18),
+            //               ),
+            //               Image.asset(
+            //                 'images/romance.jpg',
+            //                 width: 35,
+            //                 height: 35,
+            //               ),
+            //             ],
+            //           ),
+            //         ),
+            //       ),
+            // //       Padding(
+            //         padding: const EdgeInsets.only(right: 20),
+            //         child: Row(
+            //           children: [
+            //             Container(
+            //               height: 100,
+            //               width: 140,
+            //               decoration: BoxDecoration(
+            //                   borderRadius: BorderRadius.circular(8.0),
+            //                   color: Colors.grey),
+            //               child: Column(
+            //                 mainAxisAlignment: MainAxisAlignment.center,
+            //                 children: [
+            //                   Text(
+            //                     'Romance',
+            //                     style: TextStyle(fontSize: 18),
+            //                   ),
+            //                   Image.asset(
+            //                     'images/romance.jpg',
+            //                     width: 35,
+            //                     height: 35,
+            //                   ),
+            //                 ],
+            //               ),
+            //             ),
+            //           ],
+            //         ),
+            //       ),
+            //       Padding(
+            //         padding: const EdgeInsets.only(right: 20),
+            //         child: Container(
+            //           height: 100,
+            //           width: 140,
+            //           decoration: BoxDecoration(
+            //               borderRadius: BorderRadius.circular(8.0),
+            //               color: Colors.blueGrey),
+            //           child: Column(
+            //             mainAxisAlignment: MainAxisAlignment.center,
+            //             children: [
+            //               Text(
+            //                 'Comedy',
+            //                 style: TextStyle(fontSize: 18),
+            //               ),
+            //               Image.asset(
+            //                 'images/comedy.jpg',
+            //                 width: 35,
+            //                 height: 35,
+            //               ),
+            //             ],
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 10, top: 10),

@@ -71,6 +71,9 @@ flutter:
       - images/horror.jpg
       - images/black.jpg
       - images/peninsula.png
+      - images/dinokuning.JPEG
+      - images/dino2.JPEG
+      - images/dino3.JPEG
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
