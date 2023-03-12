@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:test_doang/drawer.dart';
+import 'package:test_doang/pages/CateThree.dart';
+import 'package:test_doang/pages/cataTwo.dart';
+import 'package:test_doang/pages/cateFour.dart';
 import 'package:test_doang/pages/cateOne.dart';
 
 class Home extends StatelessWidget {
@@ -13,6 +16,7 @@ class Home extends StatelessWidget {
       endDrawer: DrawerSide(),
       backgroundColor: Colors.black,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         iconTheme: IconThemeData(color: Colors.blue),
         elevation: 0,
         backgroundColor: Colors.black,
@@ -147,25 +151,31 @@ class Home extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 20),
-                child: Container(
-                  height: 100,
-                  width: 140,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.0),
-                      color: Colors.grey),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Romance',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Image.asset(
-                        'images/romance.jpg',
-                        width: 35,
-                        height: 35,
-                      ),
-                    ],
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Cate2()));
+                  },
+                  child: Container(
+                    height: 100,
+                    width: 140,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        color: Colors.grey),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Romance',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        Image.asset(
+                          'images/romance.jpg',
+                          width: 35,
+                          height: 35,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -173,25 +183,31 @@ class Home extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 20),
                 child: Row(
                   children: [
-                    Container(
-                      height: 100,
-                      width: 140,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          color: Colors.grey),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Horror',
-                            style: TextStyle(fontSize: 18),
-                          ),
-                          Image.asset(
-                            'images/horror.jpg',
-                            width: 35,
-                            height: 35,
-                          ),
-                        ],
+                    InkWell(
+                      onTap: () {
+                    Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Cate3()));
+                  },
+                      child: Container(
+                        height: 100,
+                        width: 140,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8.0),
+                            color: Colors.grey),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Horror',
+                              style: TextStyle(fontSize: 18),
+                            ),
+                            Image.asset(
+                              'images/horror.jpg',
+                              width: 35,
+                              height: 35,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -199,25 +215,31 @@ class Home extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 20),
-                child: Container(
-                  height: 100,
-                  width: 140,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8.0),
-                      color: Colors.grey),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Comedy',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Image.asset(
-                        'images/comedy.jpg',
-                        width: 35,
-                        height: 35,
-                      ),
-                    ],
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Cate4()));
+                  },
+                  child: Container(
+                    height: 100,
+                    width: 140,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.0),
+                        color: Colors.grey),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Comedy',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        Image.asset(
+                          'images/comedy.jpg',
+                          width: 35,
+                          height: 35,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

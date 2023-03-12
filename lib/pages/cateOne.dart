@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, unnecessary_new, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:test_doang/pages/review.dart';
 
 class Cate1 extends StatelessWidget {
   const Cate1({super.key});
@@ -91,30 +92,55 @@ class Cate1 extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 10, bottom: 20),
                     child: Text(
                       'Action',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      
                     ),
                   ),
-                  MovieReview(
-                    Img: 'images/peninsula.png',
-                    Judul: 'The Last Of Us',
-                    Sinopsis:
-                        'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.',
+                  InkWell(
+                    onTap: () {
+                    Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Review()));
+                  },
+                    child: MovieReview(
+                      Img: 'images/peninsula.png',
+                      Judul: 'Penisula',
+                      Sinopsis:
+                          'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.',
+                    ),
                   ),
-                  MovieReview(
-                      Img: 'images/residentevil.png',
-                      Judul: 'Resident evil',
-                      Sinopsis:
-                          'Ditetapkan pada tahun 1998, kisah asal ini mengeksplorasi rahasia Spencer Mansion yang misterius dan Kota Raccoon yang naas.'),
-                  MovieReview(
-                      Img: 'images/topgunmaverick.png',
-                      Judul: 'Top Gun Maverick',
-                      Sinopsis:
-                          'Setelah tiga puluh tahun, Maverick masih mendorong amplop sebagai penerbang angkatan laut top, tetapi harus menghadapi hantu masa lalunya ketika dia memimpin lulusan elit TOP GUN dalam misi yang menuntut pengorbanan tertinggi dari mereka yang dipilih untuk menerbangkannya.'),
-                  MovieReview(
-                      Img: 'images/thelastofus.png',
-                      Judul: 'The Last Of Us',
-                      Sinopsis:
-                          'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.'),
+                  InkWell(
+                    onTap: () {
+                    Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Review()));
+                  },
+                    child: MovieReview(
+                        Img: 'images/residentevil.png',
+                        Judul: 'Resident evil',
+                        Sinopsis:
+                            'Ditetapkan pada tahun 1998, kisah asal ini mengeksplorasi rahasia Spencer Mansion yang misterius dan Kota Raccoon yang naas.'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                    Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Review()));
+                  },
+                    child: MovieReview(
+                        Img: 'images/topgunmaverick.png',
+                        Judul: 'Top Gun Maverick',
+                        Sinopsis:
+                            'Setelah tiga puluh tahun, Maverick masih mendorong amplop sebagai penerbang angkatan laut top, tetapi harus menghadapi hantu masa lalunya ketika dia memimpin lulusan elit TOP GUN dalam misi yang menuntut pengorbanan tertinggi dari mereka yang dipilih untuk menerbangkannya.'),
+                  ),
+                  InkWell(
+                    onTap: () {
+                    Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Review()));
+                  },
+                    child: MovieReview(
+                        Img: 'images/thelastofus.png',
+                        Judul: 'The Last Of Us',
+                        Sinopsis:
+                            'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.'),
+                  ),
                 ],
               ),
             ],

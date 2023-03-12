@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:test_doang/pages/home.dart';
-import 'package:test_doang/pages/signup.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:test_doang/pages/logintrue.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class SignUp extends StatelessWidget {
+  const SignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
+    return Scaffold(
             resizeToAvoidBottomInset: false,
             backgroundColor: Colors.black,
             body: Container(
@@ -36,7 +35,7 @@ class LoginPage extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 20),
                           child: Container(
                             alignment: Alignment.centerLeft,
-                            child: Text('Username',
+                            child: Text('Email',
                                 // ignore: prefer_const_constructors
                                 style: TextStyle(
                                   color: Colors.white,
@@ -64,6 +63,50 @@ class LoginPage extends StatelessWidget {
                           width: 300,
                           child: const TextField(
                             keyboardType: TextInputType.emailAddress,
+                            style: TextStyle(color: Colors.black87),
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                contentPadding: EdgeInsets.only(top: 14),
+                                prefixIcon: Icon(
+                                  Icons.person,
+                                  color: Colors.black38,
+                                ),
+                                hintText: 'Email',
+                                hintStyle: TextStyle(color: Colors.black38)),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20),
+                          child: Container(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              'Username',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                          width: 50,
+                        ),
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          decoration: BoxDecoration(
+                              color: Color(0xffD9D9D9),
+                              borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                const BoxShadow(
+                                    color: Colors.black,
+                                    blurRadius: 6,
+                                    offset: Offset(0, 2))
+                              ]),
+                          height: 60,
+                          width: 300,
+                          child: const TextField(
+                            keyboardType: TextInputType.visiblePassword,
                             style: TextStyle(color: Colors.black87),
                             decoration: InputDecoration(
                                 border: InputBorder.none,
@@ -121,19 +164,14 @@ class LoginPage extends StatelessWidget {
                                 hintStyle: TextStyle(color: Colors.black38)),
                           ),
                         ),
-                        Text('Forget Password?', 
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),),
-
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 250, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(0,150, 0, 0),
                           child: InkWell(
                             onTap: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => Home()));
+                                      builder: (context) => LoginPage()));
                             },
                             child: Container(
                               width: 300,
@@ -144,20 +182,14 @@ class LoginPage extends StatelessWidget {
                               ),
                               child: Center(
                                   child: Text(
-                                "Login",
-                                style: TextStyle(fontSize: 20),
+                                "Sign Up",
+                                style: TextStyle(fontSize: 20, color: Colors.black),
                               )),
                             ),
                           ),
                         ),
-                        InkWell(
-                          onTap: (){
-                            Navigator.push(context, 
-                            MaterialPageRoute(
-                              builder: (context)=>SignUp()));
-                          },
-                          child: Text("Don't Have Any Account?", style: TextStyle(color: Colors.grey),))
                       ]),
-                ))));
+                ))
+    );
   }
 }

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_doang/pages/about_us.dart';
 import 'package:test_doang/pages/home.dart';
+import 'package:test_doang/pages/profile.dart';
 
 class DrawerSide extends StatelessWidget {
   const DrawerSide({super.key});
@@ -19,7 +20,7 @@ class DrawerSide extends StatelessWidget {
               text: 'Profile',
               onTap: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Home()));
+                    context, MaterialPageRoute(builder: (context) => Profile()));
               }),
           _drawerItem(
               icon: Icons.home,

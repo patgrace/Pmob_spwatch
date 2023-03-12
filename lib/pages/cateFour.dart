@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class Cate2 extends StatelessWidget {
-  const Cate2({super.key});
+class Cate4 extends StatelessWidget {
+  const Cate4({super.key});
 
   // This widget is the root of your application.
   @override
@@ -90,7 +90,7 @@ class Cate2 extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 10, bottom: 20),
                     child: Text(
-                      'Romance',
+                      'Comedy',
                       style: TextStyle(color: Colors.white, fontSize: 20),
                       
                     ),
