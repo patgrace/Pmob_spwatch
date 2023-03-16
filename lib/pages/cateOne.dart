@@ -10,142 +10,162 @@ class Cate1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          resizeToAvoidBottomInset: false,
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          toolbarHeight: 100,
           backgroundColor: Colors.black,
-          appBar: AppBar(
-            toolbarHeight: 100,
-            backgroundColor: Colors.black,
-            title: Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: Row(
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            CircleAvatar(
-                              radius: 30,
-                              backgroundImage:
-                                  AssetImage('images/dinokuning.jpeg'),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(10),
-                              child: Text("Hi Patricia!",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 22,
-                                    fontFamily: "Montserrat",
-                                    fontWeight: FontWeight.w700,
-                                  )),
-                            ),
-                          ],
+          title: Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: Row(
+                    // ignore: prefer_const_literals_to_create_immutables
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage('images/dinokuning.jpeg'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Text(
+                          "Hi Patricia!",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 22,
+                            fontFamily: "Montserrat",
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                      child: Icon(
-                        Icons.menu,
-                        color: Colors.blue,
-                      ),
-                    ),
-                  ]),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  child: Icon(
+                    Icons.menu,
+                    color: Colors.blue,
+                  ),
+                ),
+              ],
             ),
           ),
-          body: ListView(
-            scrollDirection: Axis.vertical,
-            children: [
-              Column(
-                children: [
-                  SizedBox(
-                    height: 40,
-                    width: 390,
-                    child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.grey,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10.0))),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 10, right: 2),
-                              child: Icon(
-                                Icons.search,
-                                color: Colors.black,
-                              ),
-                            ),
-                            Text(
-                              'Search Movie',
-                              style: TextStyle(color: Colors.grey[300]),
-                            )
-                          ],
-                        )),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10, bottom: 20),
-                    child: Text(
-                      'Action',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                      
+        ),
+        body: ListView(
+          scrollDirection: Axis.vertical,
+          children: [
+            Column(
+              children: [
+                SizedBox(
+                  height: 40,
+                  width: 390,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 10, right: 2),
+                          child: Icon(
+                            Icons.search,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          'Search Movie',
+                          style: TextStyle(
+                            color: Colors.grey[300],
+                          ),
+                        )
+                      ],
                     ),
                   ),
-                  InkWell(
-                    onTap: () {
-                    Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Review()));
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10, bottom: 20),
+                  child: Text(
+                    'Action',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Review(),
+                      ),
+                    );
                   },
-                    child: MovieReview(
-                      Img: 'images/peninsula.png',
-                      Judul: 'Penisula',
+                  child: MovieReview(
+                    Img: 'images/peninsula.png',
+                    Judul: 'Penisula',
+                    Sinopsis:
+                        'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.',
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Review(),
+                      ),
+                    );
+                  },
+                  child: MovieReview(
+                      Img: 'images/residentevil.png',
+                      Judul: 'Resident evil',
                       Sinopsis:
-                          'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.',
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                    Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Review()));
+                          'Ditetapkan pada tahun 1998, kisah asal ini mengeksplorasi rahasia Spencer Mansion yang misterius dan Kota Raccoon yang naas.'),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Review(),
+                      ),
+                    );
                   },
-                    child: MovieReview(
-                        Img: 'images/residentevil.png',
-                        Judul: 'Resident evil',
-                        Sinopsis:
-                            'Ditetapkan pada tahun 1998, kisah asal ini mengeksplorasi rahasia Spencer Mansion yang misterius dan Kota Raccoon yang naas.'),
-                  ),
-                  InkWell(
-                    onTap: () {
-                    Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Review()));
+                  child: MovieReview(
+                      Img: 'images/topgunmaverick.png',
+                      Judul: 'Top Gun Maverick',
+                      Sinopsis:
+                          'Setelah tiga puluh tahun, Maverick masih mendorong amplop sebagai penerbang angkatan laut top, tetapi harus menghadapi hantu masa lalunya ketika dia memimpin lulusan elit TOP GUN dalam misi yang menuntut pengorbanan tertinggi dari mereka yang dipilih untuk menerbangkannya.'),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Review(),
+                      ),
+                    );
                   },
-                    child: MovieReview(
-                        Img: 'images/topgunmaverick.png',
-                        Judul: 'Top Gun Maverick',
-                        Sinopsis:
-                            'Setelah tiga puluh tahun, Maverick masih mendorong amplop sebagai penerbang angkatan laut top, tetapi harus menghadapi hantu masa lalunya ketika dia memimpin lulusan elit TOP GUN dalam misi yang menuntut pengorbanan tertinggi dari mereka yang dipilih untuk menerbangkannya.'),
-                  ),
-                  InkWell(
-                    onTap: () {
-                    Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Review()));
-                  },
-                    child: MovieReview(
-                        Img: 'images/thelastofus.png',
-                        Judul: 'The Last Of Us',
-                        Sinopsis:
-                            'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.'),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ));
+                  child: MovieReview(
+                      Img: 'images/thelastofus.png',
+                      Judul: 'The Last Of Us',
+                      Sinopsis:
+                          'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.'),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 

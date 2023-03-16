@@ -9,33 +9,34 @@ class AboutUsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        endDrawer: DrawerSide(),
-        appBar: AppBar(
-          iconTheme: const IconThemeData(color: Colors.blue, size: 30),
-          toolbarHeight: 75,
-          title: const Text(
-            'About Us',
-            style: TextStyle(
-                color: Colors.white,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.bold,
-                fontSize: 25),
-          ),
-          elevation: 0,
-          backgroundColor: Colors.black,
-          centerTitle: true,
+      endDrawer: DrawerSide(),
+      appBar: AppBar(
+        iconTheme: const IconThemeData(color: Colors.blue, size: 30),
+        toolbarHeight: 75,
+        title: const Text(
+          'About Us',
+          style: TextStyle(
+              color: Colors.white,
+              fontFamily: 'Montserrat',
+              fontWeight: FontWeight.bold,
+              fontSize: 25),
         ),
-        body: Column(children: [
+        elevation: 0,
+        backgroundColor: Colors.black,
+        centerTitle: true,
+      ),
+      body: Column(
+        children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 50, right: 20, top: 10),
                 child: Center(
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                      Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: const [
+                      SizedBox(
                         width: 300,
                         height: 200,
                         child: Text(
@@ -45,16 +46,21 @@ class AboutUsPage extends StatelessWidget {
                         ),
                       ),
                       Text(
-                          "develope by :\nPatricia Grace Nathania/082111633033\nShaquille Etanntyo Wibowo/082111633098",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Colors.grey))
-                    ])),
+                        "develope by :\nPatricia Grace Nathania/082111633033\nShaquille Etanntyo Wibowo/082111633098",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.grey),
+                      )
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
           SizedBox(
             height: 10,
           ),
-        ]));
+        ],
+      ),
+    );
   }
 }
