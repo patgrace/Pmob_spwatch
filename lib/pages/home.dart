@@ -2,10 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:test_doang/drawer.dart';
-import 'package:test_doang/pages/CateThree.dart';
-import 'package:test_doang/pages/cataTwo.dart';
-import 'package:test_doang/pages/cateFour.dart';
-import 'package:test_doang/pages/cateOne.dart';
+import 'package:test_doang/pages/CateHorror.dart';
+import 'package:test_doang/pages/cateAni.dart';
+import 'package:test_doang/pages/cateRom.dart';
+import 'package:test_doang/pages/cateCom.dart';
+import 'package:test_doang/pages/cateAct.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -269,6 +270,44 @@ class Home extends StatelessWidget {
                           ],
                         ),
                       ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 20),
+                    child: Row(
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Cate5(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            height: 100,
+                            width: 140,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                color: Colors.grey),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Animation',
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                                Image.asset(
+                                  'images/animation.jpg',
+                                  width: 35,
+                                  height: 35,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

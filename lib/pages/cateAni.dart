@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class Cate4 extends StatelessWidget {
-  const Cate4({super.key});
+class Cate5 extends StatelessWidget {
+  const Cate5({super.key});
 
   // This widget is the root of your application.
   @override
@@ -94,31 +94,31 @@ class Cate4 extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 10, bottom: 20),
                   child: Text(
-                    'Comedy',
+                    'Animation',
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
                 MovieReview(
-                  Img: 'images/peninsula.png',
-                  Judul: 'Penisula',
+                  Img: 'images/babylon.jpg',
+                  Judul: 'Babylon',
                   Sinopsis:
-                      'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.',
+                      'Sebuah kisah tentang ambisi yang sangat besar dan kelebihan yang keterlaluan, ia menelusuri naik turunnya banyak karakter selama era dekadensi dan kebobrokan yang tak terkendali di awal Hollywood.',
                 ),
                 MovieReview(
-                    Img: 'images/residentevil.png',
-                    Judul: 'Resident evil',
+                    Img: 'images/shrinking.jpeg',
+                    Judul: 'Shrinking',
                     Sinopsis:
-                        'Ditetapkan pada tahun 1998, kisah asal ini mengeksplorasi rahasia Spencer Mansion yang misterius dan Kota Raccoon yang naas.'),
+                        'Seorang terapis yang berduka mulai memberi tahu kliennya apa yang dia pikirkan. Mengabaikan pelatihan dan etikanya, dia mendapati dirinya membuat perubahan besar pada kehidupan orang termasuk kehidupannya sendiri.'),
                 MovieReview(
-                    Img: 'images/topgunmaverick.png',
-                    Judul: 'Top Gun Maverick',
+                    Img: 'images/whitelotus.jpg',
+                    Judul: 'White Lotus',
                     Sinopsis:
-                        'Setelah tiga puluh tahun, Maverick masih mendorong amplop sebagai penerbang angkatan laut top, tetapi harus menghadapi hantu masa lalunya ketika dia memimpin lulusan elit TOP GUN dalam misi yang menuntut pengorbanan tertinggi dari mereka yang dipilih untuk menerbangkannya.'),
+                        'Eksploitasi berbagai tamu dan karyawan resors White Lotus, yang masa inapnya dipengaruhi oleh berbagai disfungsi mereka selama rentang waktu seminggu.'),
                 MovieReview(
-                    Img: 'images/thelastofus.png',
-                    Judul: 'The Last Of Us',
+                    Img: 'images/you_people.jpg',
+                    Judul: 'You People',
                     Sinopsis:
-                        'Setelah pandemi global menghancurkan peradaban, seorang penyintas yang tangguh mengambil alih seorang gadis berusia 14 tahun yang mungkin menjadi harapan terakhir umat manusia.'),
+                        'Mengikuti pasangan baru dan keluarga mereka, yang menemukan diri mereka memeriksa cinta modern dan dinamika keluarga di tengah benturan budaya, ekspektasi masyarakat, dan perbedaan generasi.'),
               ],
             ),
           ],
@@ -180,7 +180,7 @@ class MovieReview extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 15, right: 10),
+                  padding: const EdgeInsets.only(top: 15, right: 10, left: 10),
                   child: SizedBox(
                     width: 190,
                     height: 100,
