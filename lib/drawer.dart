@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:test_doang/pages/about_us.dart';
 import 'package:test_doang/pages/home.dart';
 import 'package:test_doang/pages/profile.dart';
+import 'package:test_doang/pages/liked.dart';
 
 class DrawerSide extends StatelessWidget {
   const DrawerSide({super.key});
@@ -19,8 +20,8 @@ class DrawerSide extends StatelessWidget {
               icon: Icons.person,
               text: 'Profile',
               onTap: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Profile()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Profile()));
               }),
           _drawerItem(
               icon: Icons.home,
@@ -28,6 +29,13 @@ class DrawerSide extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (context) => Home()));
+              }),
+          _drawerItem(
+              icon: Icons.favorite,
+              text: 'Liked',
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Liked()));
               }),
           _drawerItem(
               icon: Icons.info_outline,
