@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class Review extends StatelessWidget {
   const Review({super.key});
@@ -14,21 +12,21 @@ class Review extends StatelessWidget {
         automaticallyImplyLeading: false,
         toolbarHeight: 100,
         backgroundColor: Colors.black,
-        title: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+        title: const Padding(
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: Row(
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    const CircleAvatar(
+                    CircleAvatar(
                       radius: 30,
                       backgroundImage: AssetImage('images/dinokuning.jpeg'),
                     ),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.all(10),
                       child: Text(
                         "Hi Patricia!",
@@ -43,7 +41,7 @@ class Review extends StatelessWidget {
                   ],
                 ),
               ),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Icon(
                   Icons.menu,

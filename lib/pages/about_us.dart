@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:test_doang/drawer.dart';
-import 'package:test_doang/pages/home.dart';
 
 class AboutUsPage extends StatelessWidget {
   @override
@@ -26,16 +25,16 @@ class AboutUsPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
-        children: [
+        children: const [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 50, right: 20, top: 10),
+                padding: EdgeInsets.only(left: 50, right: 20, top: 10),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: const [
+                    children: [
                       SizedBox(
                         width: 300,
                         height: 200,

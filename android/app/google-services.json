@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "501571747913",
+    "project_id": "spwatch-7d2c4",
+    "storage_bucket": "spwatch-7d2c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501571747913:android:3d3dd78ab23c9a7ab77f98",
+        "android_client_info": {
+          "package_name": "com.example.test_doang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501571747913-afehekvq86tl1v2nqer0n5fejr609srp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-DePB5vLnJNYR4BhFg__VU3bgcUZ1--Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501571747913-afehekvq86tl1v2nqer0n5fejr609srp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

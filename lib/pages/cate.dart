@@ -25,7 +25,6 @@ class Cate1 extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                     child: Row(
-                      // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         CircleAvatar(
                           radius: 30,

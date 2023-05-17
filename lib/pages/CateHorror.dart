@@ -24,7 +24,6 @@ class Cate3 extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Row(
-                    // ignore: prefer_const_literals_to_create_immutables
                     children: [
                       CircleAvatar(
                         radius: 30,
@@ -132,7 +131,11 @@ class MovieReview extends StatelessWidget {
   final String Img;
   final String Judul;
   final String Sinopsis;
-  MovieReview({required this.Img, required this.Judul, required this.Sinopsis});
+  const MovieReview(
+      {super.key,
+      required this.Img,
+      required this.Judul,
+      required this.Sinopsis});
 
   @override
   Widget build(BuildContext context) {
@@ -180,7 +183,7 @@ class MovieReview extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 15, right: 10),
-                  child: Container(
+                  child: SizedBox(
                     width: 190,
                     height: 100,
                     child: Text(Sinopsis,
