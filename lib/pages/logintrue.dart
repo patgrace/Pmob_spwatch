@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:test_doang/pages/home.dart';
 import 'package:test_doang/pages/signup.dart';
+import 'package:test_doang/provider/auth.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
   @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  @override
   Widget build(BuildContext context) {
+    final authservice = Provider.of<AuthService>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -64,7 +74,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   height: 60,
                   width: 300,
-                  child: const TextField(
+                  child: TextField(
+                    controller: emailController,
                     keyboardType: TextInputType.emailAddress,
                     style: TextStyle(color: Colors.black87),
                     decoration: InputDecoration(
@@ -74,7 +85,7 @@ class LoginPage extends StatelessWidget {
                         Icons.person,
                         color: Colors.black38,
                       ),
-                      hintText: 'Username',
+                      hintText: 'Email',
                       hintStyle: TextStyle(color: Colors.black38),
                     ),
                   ),
@@ -111,7 +122,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   height: 60,
                   width: 300,
-                  child: const TextField(
+                  child: TextField(
+                    controller: passwordController,
                     keyboardType: TextInputType.visiblePassword,
                     obscureText: true,
                     style: TextStyle(color: Colors.black87),
@@ -138,6 +150,8 @@ class LoginPage extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(0, 250, 0, 0),
                   child: InkWell(
                     onTap: () {
+                      authservice.signInWithEmailAndPassword(
+                          emailController.text, passwordController.text);
                       Navigator.push(
                         context,
                         MaterialPageRoute(

@@ -12,7 +12,7 @@ class Review extends StatelessWidget {
         automaticallyImplyLeading: false,
         toolbarHeight: 100,
         backgroundColor: Colors.black,
-        title: const Padding(
+        title:  Padding(
           padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

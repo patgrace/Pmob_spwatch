@@ -25,7 +25,7 @@ class AboutUsPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
-        children: const [
+        children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

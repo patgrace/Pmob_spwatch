@@ -1,16 +1,20 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:test_doang/pages/about_us.dart';
 import 'package:test_doang/pages/home.dart';
+import 'package:test_doang/pages/logintrue.dart';
 import 'package:test_doang/pages/profile.dart';
 import 'package:test_doang/pages/liked.dart';
+import 'package:test_doang/provider/auth.dart';
 
 class DrawerSide extends StatelessWidget {
   const DrawerSide({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final authservice = Provider.of<AuthService>(context);
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -44,6 +48,12 @@ class DrawerSide extends StatelessWidget {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => AboutUsPage()));
               }),
+          _drawerItem(
+              icon: Icons.logout_outlined,
+              text: 'Log out',
+              onTap: () async {
+                await authservice.signOut();
+              }),
         ],
       ),
     );
@@ -66,8 +76,8 @@ Widget _drawerHeader() {
         child: Image(image: AssetImage('images/dino3.jpeg'), fit: BoxFit.cover),
       )
     ],
-    accountName: Text('Patgrace'),
-    accountEmail: Text('user@gmail.com'),
+    accountName: Text('Shaquille'),
+    accountEmail: Text('shaquille@gmail.com'),
     decoration: BoxDecoration(color: Color.fromARGB(255, 0, 0, 0)),
   );
 }

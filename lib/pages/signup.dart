@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:test_doang/pages/logintrue.dart';
 
-class SignUp extends StatelessWidget {
+import '../provider/auth.dart';
+
+class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
   @override
+  State<SignUp> createState() => _SignUpState();
+}
+
+class _SignUpState extends State<SignUp> {
+  final TextEditingController usernameController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
+
+ 
+  @override
   Widget build(BuildContext context) {
+    final authservice = Provider.of<AuthService>(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.black,
@@ -61,7 +76,8 @@ class SignUp extends StatelessWidget {
                 ),
                 height: 60,
                 width: 300,
-                child: const TextField(
+                child:  TextField(
+                  controller: emailController,
                   keyboardType: TextInputType.emailAddress,
                   style: TextStyle(color: Colors.black87),
                   decoration: InputDecoration(
@@ -108,7 +124,8 @@ class SignUp extends StatelessWidget {
                 ),
                 height: 60,
                 width: 300,
-                child: const TextField(
+                child:  TextField(
+                  controller: usernameController,
                   keyboardType: TextInputType.visiblePassword,
                   style: TextStyle(color: Colors.black87),
                   decoration: InputDecoration(
@@ -155,7 +172,8 @@ class SignUp extends StatelessWidget {
                 ),
                 height: 60,
                 width: 300,
-                child: const TextField(
+                child:  TextField(
+                  controller: passwordController,
                   keyboardType: TextInputType.visiblePassword,
                   obscureText: true,
                   style: TextStyle(color: Colors.black87),
@@ -174,13 +192,9 @@ class SignUp extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
                 child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginPage(),
-                      ),
-                    );
+                  onTap: () async {
+                    await authservice.createUserWithEmailAndPassword(emailController.text, passwordController.text);
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> LoginPage()));
                   },
                   child: Container(
                     width: 300,
