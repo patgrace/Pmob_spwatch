@@ -16,8 +16,6 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-
- 
   @override
   Widget build(BuildContext context) {
     final authservice = Provider.of<AuthService>(context);
@@ -76,7 +74,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 height: 60,
                 width: 300,
-                child:  TextField(
+                child: TextField(
                   controller: emailController,
                   keyboardType: TextInputType.emailAddress,
                   style: TextStyle(color: Colors.black87),
@@ -84,7 +82,7 @@ class _SignUpState extends State<SignUp> {
                     border: InputBorder.none,
                     contentPadding: EdgeInsets.only(top: 14),
                     prefixIcon: Icon(
-                      Icons.person,
+                      Icons.mail_lock,
                       color: Colors.black38,
                     ),
                     hintText: 'Email',
@@ -124,7 +122,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 height: 60,
                 width: 300,
-                child:  TextField(
+                child: TextField(
                   controller: usernameController,
                   keyboardType: TextInputType.visiblePassword,
                   style: TextStyle(color: Colors.black87),
@@ -172,7 +170,7 @@ class _SignUpState extends State<SignUp> {
                 ),
                 height: 60,
                 width: 300,
-                child:  TextField(
+                child: TextField(
                   controller: passwordController,
                   keyboardType: TextInputType.visiblePassword,
                   obscureText: true,
@@ -181,7 +179,7 @@ class _SignUpState extends State<SignUp> {
                     border: InputBorder.none,
                     contentPadding: EdgeInsets.only(top: 14),
                     prefixIcon: Icon(
-                      Icons.person,
+                      Icons.lock,
                       color: Colors.black38,
                     ),
                     hintText: 'Password',
@@ -193,8 +191,10 @@ class _SignUpState extends State<SignUp> {
                 padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
                 child: InkWell(
                   onTap: () async {
-                    await authservice.createUserWithEmailAndPassword(emailController.text, passwordController.text);
-                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> LoginPage()));
+                    await authservice.createUserWithEmailAndPassword(
+                        emailController.text, passwordController.text);
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (_) => LoginPage()));
                   },
                   child: Container(
                     width: 300,

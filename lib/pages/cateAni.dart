@@ -32,7 +32,7 @@ class Cate5 extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(10),
                         child: Text(
-                          "Hi Patricia!",
+                          "Hi Shaquille!",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 22,

@@ -12,7 +12,7 @@ class Review extends StatelessWidget {
         automaticallyImplyLeading: false,
         toolbarHeight: 100,
         backgroundColor: Colors.black,
-        title:  Padding(
+        title: Padding(
           padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -29,7 +29,7 @@ class Review extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(10),
                       child: Text(
-                        "Hi Patricia!",
+                        "Hi Shaquille!",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 22,
@@ -106,7 +106,7 @@ class Review extends StatelessWidget {
               ),
               ListTile(
                 leading: Image.asset('images/dino2.jpeg'),
-                title: const Text('Patricia'),
+                title: const Text('Shaquille'),
                 subtitle: TextFormField(
                   cursorColor: Colors.grey,
                   decoration: const InputDecoration(
@@ -129,44 +129,39 @@ class Review extends StatelessWidget {
               ),
               ListTile(
                 leading: Image.asset('images/dino2.jpeg'),
-                title: const Text('Ammar'),
-                subtitle: const Text(
-                    'Film nya sangat bagus bikin deg-deg an recommended banget pokoknya deh '),
+                title: const Text('Angga'),
+                subtitle: const Text('Film nya sangat bagus'),
                 trailing: Image.asset('images/love.png'),
               ),
               ListTile(
                 leading: Image.asset('images/dino2.jpeg'),
-                title: const Text('Ammar'),
-                subtitle: const Text(
-                    'Film nya sangat bagus bikin deg-deg an recommended banget pokoknya deh '),
+                title: const Text('Edo'),
+                subtitle: const Text('Film nya sangat rekom '),
                 trailing: Image.asset('images/love.png'),
               ),
               ListTile(
                 leading: Image.asset('images/dino2.jpeg'),
-                title: const Text('Ammar'),
-                subtitle: const Text(
-                    'Film nya sangat bagus bikin deg-deg an recommended banget pokoknya deh '),
+                title: const Text('Rafli'),
+                subtitle: const Text('Film nya bikin jantung copot '),
                 trailing: Image.asset('images/love.png'),
               ),
               ListTile(
                 leading: Image.asset('images/dino2.jpeg'),
-                title: const Text('Ammar'),
-                subtitle: const Text(
-                    'Film nya sangat bagus bikin deg-deg an recommended banget pokoknya deh '),
+                title: const Text('Niken'),
+                subtitle: const Text('Film nya bintang 5 '),
                 trailing: Image.asset('images/love.png'),
               ),
               ListTile(
                 leading: Image.asset('images/dino2.jpeg'),
-                title: const Text('Ammar'),
-                subtitle: const Text(
-                    'Film nya sangat bagus bikin deg-deg an recommended banget pokoknya deh '),
+                title: const Text('christian'),
+                subtitle: const Text('Film nya wajib di tonton '),
                 trailing: Image.asset('images/love.png'),
               ),
               ListTile(
                 leading: Image.asset('images/dino2.jpeg'),
-                title: const Text('Ammar'),
-                subtitle: const Text(
-                    'Film nya sangat bagus bikin deg-deg an recommended banget pokoknya deh '),
+                title: const Text('Rayhan'),
+                subtitle:
+                    const Text('Film nya yang terseru yang pernah saya lihat '),
                 trailing: Image.asset('images/love.png'),
               ),
             ],

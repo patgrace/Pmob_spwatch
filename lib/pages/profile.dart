@@ -65,7 +65,7 @@ class Profile extends StatelessWidget {
                     border: InputBorder.none,
                     contentPadding: EdgeInsets.only(top: 14),
                     prefixIcon: Icon(
-                      Icons.person,
+                      Icons.lock,
                       color: Colors.black38,
                     ),
                     hintText: 'Password',

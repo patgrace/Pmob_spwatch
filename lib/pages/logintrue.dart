@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Container(
                     alignment: Alignment.centerLeft,
                     child: const Text(
-                      'Username',
+                      'Email',
                       // ignore: prefer_const_constructors
                       style: TextStyle(
                         color: Colors.white,
@@ -82,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.only(top: 14),
                       prefixIcon: Icon(
-                        Icons.person,
+                        Icons.mail_lock,
                         color: Colors.black38,
                       ),
                       hintText: 'Email',
@@ -131,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.only(top: 14),
                       prefixIcon: Icon(
-                        Icons.person,
+                        Icons.lock,
                         color: Colors.black38,
                       ),
                       hintText: 'Password',
